@@ -10,6 +10,10 @@ class Consumirapi extends Controller
 
     public function index()
     {
+        $response = Http::get('bmapi.loc/api/cars');
+
+        dd($response->body());
+
         return view('api');
     }
 }
