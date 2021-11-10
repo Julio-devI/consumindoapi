@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Consumirapi;
+use App\Http\Controllers\index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/consumirapi', [Consumirapi::class, 'index']);
+Route::get('/index', [index::class, 'index']);

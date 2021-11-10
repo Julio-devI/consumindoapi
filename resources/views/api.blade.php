@@ -12,15 +12,12 @@
                 <tr>
                   <th>name</th>
                 </tr>
-                @for ($i = 0; $i < 5; $i++) {
-                    @foreach ($nomes as $nome) {
-                        <tr>
-                            <td>{{$nome[$i]->pokemon_name}}</td>
-                        </tr>
-                    }
-                }
-                @endforeach
-                @endfor     
+                
+                @foreach ($names as $name) 
+                    <tr>
+                        <td>{{$name->name}}</td>
+                    </tr>
+                @endforeach    
         </table>
     </div>
 </body>

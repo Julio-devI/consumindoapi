@@ -12,8 +12,14 @@ class Consumirapi extends Controller
     {
         $response = Http::get('bmapi.loc/api/cars');
 
-        dd($response->body());
+        /* dd($response->body()); */
 
-        return view('api');
+        $names = json_decode($response);
+
+        /* foreach ($names as $name) {
+            echo $name->name;
+        } */
+
+        return view('api', ['names' => $names]);
     }
 }
