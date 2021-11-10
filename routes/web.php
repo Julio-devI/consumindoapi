@@ -19,5 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/consumirapi', [Consumirapi::class, 'index']);
 Route::get('/index', [index::class, 'index']);

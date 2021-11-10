@@ -41,6 +41,17 @@
         <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h">
           <h1 class="tm-text-color-white tm-site-name"><img src="./img/BMW-Logo.png" alt="" width="300" height="300">
           </h1>
+            <table style="border: 2px solid black">
+                <tr>
+                <th>name</th>
+                </tr>
+                
+                @foreach ($names as $name) 
+                    <tr>
+                        <td>{{$name->name}}</td>
+                    </tr>
+                @endforeach    
+            </table>
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
