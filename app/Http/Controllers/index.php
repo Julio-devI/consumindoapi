@@ -11,14 +11,13 @@ class index extends Controller
     {
         $response = Http::get('bmapi.loc/api/cars');
 
-        /* dd($response->body()); */
-
         $names = json_decode($response);
+        $years = json_decode($response);
 
         /* foreach ($names as $name) {
             echo $name->name;
         } */
 
-        return view('index', ['names' => $names]);
+        return view('index', ['names' => $names], ['years' => $years]);
     }
 }
