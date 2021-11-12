@@ -52,92 +52,31 @@
     </section>
 
     <!-- 2nd section -->
-    <section class="row tm-section tm-col-md-reverse">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="tm-flex-center p-5">
-          <div class="tm-md-flex-center">
-            <h2 class="tm-text-color-primary mb-4">Name the car
-              @foreach ($names as $name) 
-                  {{$name->name}}
-              @endforeach  
-            </h2>
-            <p class="mb-4">year: 
-            @foreach ($years as $year) 
-              {{$year->year}}
-            @endforeach</p>
-            <p class="mb-4">Price: </p>
-            <p class="mb-4">Colors: </p>
-            <a href="#" class="btn btn-primary float-lg-right tm-md-align-center">Read more</a>
+    @foreach ($names as $name)
+      <section class="row tm-section tm-col-md-reverse">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="tm-flex-center p-5">
+            <div class="tm-md-flex-center">
+              <h2 class="tm-text-color-primary mb-4">Name the car: {{$name->name}}</h2>
+              <p class="mb-4">year: {{$name->year}}</p>
+              <p class="mb-4">Price: {{$name->price}}</p>
+              <p class="mb-4">Colors: {{$name->colors}}</p>
+              <a href="#" class="btn btn-primary float-lg-right tm-md-align-center">Read more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-        <div class="tm-flex-center p-5 tm-bg-color-primary">
-          <div class="tm-max-w-400 tm-flex-center tm-flex-col">
-            <img src="img/image-04.jpg" alt="Image" class="rounded-circle mb-4">
-            <p class="tm-text-color-white small tm-font-thin mb-0">Description: </p>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
+          <div class="tm-flex-center p-5 tm-bg-color-primary">
+            <div class="tm-max-w-400 tm-flex-center tm-flex-col">
+              <img src="img/image-04.jpg" alt="Image" class="rounded-circle mb-4">
+              <p class="tm-text-color-white small tm-font-thin mb-0">Description: </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 3rd Section -->
-    <section class="row tm-section tm-mb-30">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-        <img src="img/image-01.jpg" alt="Image" class="img-fluid">
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="tm-flex-center p-5">
-          <div class="tm-flex-center tm-flex-col">
-            <h2 class="tm-align-left">Loerm ipsum dolor sit amet</h2>
-            <p>This is one-page HTML5 template that you can use for any purpose. Please tell your friends about <a
-                href="https://www.facebook.com/templatemo" target="_parent">TemplateMo</a> website. Thank you.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4rd Section -->
-    <section class="row tm-section tm-col-md-reverse">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="tm-flex-center p-5">
-          <div class="tm-md-flex-center">
-            <h2 class="tm-text-color-primary mb-4">Fusce ac enim at justo</h2>
-            <p class="mb-4">Pellentesque sagittis feugiat massa, vitae blandit elit dictum in. Nam eleifend nunc dui,
-              sed cusus justo molestie id. Vestibulum vel sagittis justo.</p>
-            <a href="#" class="btn btn-primary float-lg-right tm-md-align-center">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-        <div class="tm-flex-center p-5 tm-bg-color-primary">
-          <div class="tm-max-w-400 tm-flex-center tm-flex-col">
-            <img src="img/image-04.jpg" alt="Image" class="rounded-circle mb-4">
-            <p class="tm-text-color-white small tm-font-thin mb-0">Nullam eleifend, ipsum eu aliquet fermentum , odio
-              urna dignissim ante, semper maximus libero nisl non nibh.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--5rd section-->
-    <section class="row tm-section tm-mb-30">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
-        <img src="img/image-01.jpg" alt="Image" class="img-fluid">
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <div class="tm-flex-center p-5">
-          <div class="tm-flex-center tm-flex-col">
-            <h2 class="tm-align-left">Loerm ipsum dolor sit amet</h2>
-            <p>This is one-page HTML5 template that you can use for any purpose. Please tell your friends about <a
-                href="https://www.facebook.com/templatemo" target="_parent">TemplateMo</a> website. Thank you.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+      </section>
+      <br>
+    @endforeach
+    
     <!-- 6th Section -->
     <section class="row">
       <div class="col-lg-12 tm-form-header pl-5 pr-5">
